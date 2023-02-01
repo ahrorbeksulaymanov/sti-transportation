@@ -1,6 +1,7 @@
+import React from 'react';
 import './style.scss';
 
-const FirstComp = () => {
+const FirstComp:React.FC = ():JSX.Element => {
 
     return (
         <div className="first-comp-wrapper w-[100%] ">

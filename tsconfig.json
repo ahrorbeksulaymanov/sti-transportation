@@ -29,6 +29,11 @@
     "**/**/*.tsx",
     "<path-to-your-source>.ts",
     "<path-to-your-source>.tsx",
+    "**/*.jsx",
+    "**/**/*.js",
+    "**/**/*.jsx",
+    "<path-to-your-source>.js",
+    "<path-to-your-source>.jsx",
   ]
 }
 
