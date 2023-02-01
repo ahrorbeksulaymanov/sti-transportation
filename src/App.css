@@ -1,0 +1,16 @@
+:root {
+  --main-bg-color: #141414;
+  --card-bg-color: #292929;
+  --white: #fff;
+  --main-color: #D94747;
+}
+
+.my-container {
+  @apply container mx-auto;
+}
+
+.my-card{
+  @apply bg-[#292929] rounded-[36px] px-[44px] py-[40px] relative
+}
+
+
