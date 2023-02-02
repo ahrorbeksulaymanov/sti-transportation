@@ -14,7 +14,7 @@ const FirstComp:React.FC = ():JSX.Element => {
                     <h3 className='xxl:text-[200px] lg:text-[190px] md:text-[150px] sm:text-[100px] text-[50px] xl:leading-[170px] md:leading-[140px] sm:leading-[80px] leading-[45px]' data-aos="fade-up" data-aos-duration="1500">TRANSPORTATION</h3>
                 </Parallax>
             </div>
-            <img data-aos="fade-up" data-aos-duration="3000" className='md:w-[94%] w-[100%] absolute md:left-[3%] left-0 lg:top-[180px] md:top-[230px] sm:top-[90px] top-[-40px] z-[1]' src={mainTruck} alt="" />
+            <img data-aos="fade-up" data-aos-duration="3000" className='md:w-[94%] w-[100%] absolute md:left-[3%] left-0 lg:top-[180px] md:top-[230px] sm:top-[90px] top-[40px] z-[1]' src={mainTruck} alt="" />
         </div>
     )
 }
