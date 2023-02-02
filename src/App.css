@@ -1,12 +1,12 @@
 :root {
-  --main-bg-color: #141414;
+  --main-bg-color: #000;
   --card-bg-color: #292929;
   --white: #fff;
   --main-color: #D94747;
 }
 
 .my-container {
-  @apply container mx-auto;
+  @apply container mx-auto md:w-auto w-[96%];
 }
 
 .my-card{
@@ -14,3 +14,24 @@
 }
 
 
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border: 1px solid #eff2f7 !important;
+}
+td,
+th {
+  padding: 0.7rem 0.7rem 0.7rem 1rem !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f7f7f7;
+  color: var(--bs-table-striped-color) !important;
+}
+
+.table-hover tr:hover {
+  background-color: #ececec !important;
+}

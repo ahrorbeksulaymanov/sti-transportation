@@ -3,6 +3,7 @@ import './App.css';
 import AboutPage from './components/about-us';
 import WhyUs from './components/why-us';
 import RoutesMiddleware from './routes/routerMiddleware';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       {/* <FirstComp />
       <AboutPage />
       <WhyUs /> */}
-      <RoutesMiddleware />
+      <ParallaxProvider>
+        <RoutesMiddleware />
+      </ParallaxProvider>
     </div>
   );
 }

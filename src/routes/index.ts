@@ -1,3 +1,4 @@
+import TruckTable from "../components/admin-trucks";
 import Login from "../components/login";
 import WhyUs from "../components/why-us";
 import Home from "../pages/home";
@@ -30,7 +31,7 @@ export const private_rotes = [
     {
       title: "Home page",
       path: "/admin",
-      component: WhyUs,
+      component: TruckTable,
       exact: true,
       config: {
         key: "*",

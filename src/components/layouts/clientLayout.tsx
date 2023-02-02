@@ -1,8 +1,12 @@
+import Header from "../header";
 
 const ClientLayout = ({children}: any) => {
 
     return(
-        <section>{children}</section>
+        <>
+            <Header />
+            <section>{children}</section>
+        </>
     )
 }
 export default ClientLayout;

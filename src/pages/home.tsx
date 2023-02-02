@@ -6,8 +6,8 @@ function Home() {
   return (
     <div>
       <FirstComp />
-      <AboutPage />
-      <WhyUs />
+      {/* <AboutPage />
+      <WhyUs /> */}
     </div>
   );
 }

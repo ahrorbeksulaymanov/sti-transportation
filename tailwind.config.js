@@ -16,6 +16,8 @@ module.exports = {
 
       'xl': '1300px',
       // => @media (min-width: 1200px) { ... }
+
+      'xxl': '1365px',
     },
   },
   plugins: [],
