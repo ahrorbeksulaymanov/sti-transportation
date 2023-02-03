@@ -1,6 +1,7 @@
 import './App.css';
 import RoutesMiddleware from './routes/routerMiddleware';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import 'swiper/css';
 
 function App() {
   return (

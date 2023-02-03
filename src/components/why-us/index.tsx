@@ -1,3 +1,4 @@
+import useWindowSize from "../../custom-hooks/useWindowSize/useWindowSize"
 
 type Data = {
     num: String
@@ -6,6 +7,8 @@ type Data = {
 }
 const WhyUs:React.FC = ():JSX.Element => {
 
+    const {width} = useWindowSize()
+    
 
     const data1:Data[] = [
         {
@@ -43,14 +46,14 @@ const WhyUs:React.FC = ():JSX.Element => {
                 <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px] mb-[44px]">WHY CHOOSE <span className="text-[#EE3532]">US?</span></h4>
                 <div className="grid grid-cols-12 md:gap-[30px] gap-[14px]">
                     {data1.map((item:Data, index:number) => (
-                        <div data-aos={index === 0 ? "fade-right" : "fade-left"} key={index} style={{borderColor:"rgba(255, 255, 255, 0.05)"}} className="md:col-span-6 col-span-12 rounded-[4px] bg-[#111] border-[1px] border-solid hover:bg-[#D94747] cursor-pointer duration-[0.2s] py-[24px] px-[20px]">
+                        <div data-aos={width > 768 ? (index === 0 ? "fade-right" : "fade-left") : "zoom-in-up"} key={index} style={{borderColor:"rgba(255, 255, 255, 0.05)"}} className="md:col-span-6 col-span-12 rounded-[4px] bg-[#111] border-[1px] border-solid hover:bg-[#D94747] cursor-pointer duration-[0.2s] py-[24px] px-[20px]">
                             <h3 className="md:text-[42px] text-[36px] font-[800]">{item.num}</h3>  
                             <h4 className="md:text-[24px] text-[18px] font-[700]">{item.title}</h4>
                             <p className="font-[400] md:text-[16px] text-[14px] mt-[14px]">{item.description}</p>
                         </div>
                     ))}
                     {data2.map((item:Data, index:number) => (
-                        <div data-aos={index === 0 ? "fade-up-right" : index === 1 ? "zoom-in-up" : "fade-up-left"} key={index} style={{borderColor:"rgba(255, 255, 255, 0.05)"}} className="lg:col-span-4 md:col-span-6 col-span-12  rounded-[4px] bg-[#111] border-[1px] border-solid hover:bg-[#D94747] cursor-pointer duration-[0.2s] py-[24px] px-[20px]">
+                        <div data-aos={width > 768 ? (index === 0 ? "fade-up-right" : index === 1 ? "zoom-in-up" : "fade-up-left") : "zoom-in-up"} key={index} style={{borderColor:"rgba(255, 255, 255, 0.05)"}} className="lg:col-span-4 md:col-span-6 col-span-12  rounded-[4px] bg-[#111] border-[1px] border-solid hover:bg-[#D94747] cursor-pointer duration-[0.2s] py-[24px] px-[20px]">
                             <h3 className="md:text-[42px] text-[36px] font-[800]">{item.num}</h3>
                             <h4 className="md:text-[24px] text-[18px] font-[700]">{item.title}</h4>
                             <p className="font-[400] md:text-[16px] text-[14px] mt-[14px]">{item.description}</p>

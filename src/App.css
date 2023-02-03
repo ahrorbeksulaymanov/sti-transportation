@@ -36,3 +36,14 @@ th {
 .font-babes{
   font-family: 'Bebas Neue', sans-serif;
 }
+
+.collapse-description{
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.swiper-wrapper{
+  align-items: center;
+}
