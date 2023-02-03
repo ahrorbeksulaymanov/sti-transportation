@@ -6,7 +6,7 @@ import { Parallax } from 'react-scroll-parallax';
 const FirstComp:React.FC = ():JSX.Element => {
 
     return (
-        <div className="relative first-component md:mt-[105px] mt-[170px] md:pb-[300px] mb-[100px]">
+        <div className="relative first-component md:mt-[105px] mt-[170px] xxl:pb-[300px] pb-[100px] mb-[100px]">
             <div className="my-container">
                 <div className="main-blur-back absolute lg:w-[728px] sm:w-[476px] w-[100%] lg:h-[700px] sm:h-[500px] h-[300px] xl:top-[180px] lg:top-[120px] sm:top-[-50px] top-[-100px]"></div>
                 <Parallax speed={40}>

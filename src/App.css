@@ -9,9 +9,6 @@
   @apply container mx-auto md:w-auto w-[96%];
 }
 
-.my-card{
-  @apply bg-[#292929] rounded-[36px] px-[44px] py-[40px] relative
-}
 
 
 thead,

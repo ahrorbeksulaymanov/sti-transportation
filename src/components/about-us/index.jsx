@@ -39,7 +39,7 @@ const AboutPage = () => {
                         <circle cx="36" cy="36" r="36" fill="white" fill-opacity="0.6"/>
                         <path d="M48.25 32.883C50.9167 34.4226 52.25 35.1924 52.25 36.3471C52.25 37.5018 50.9167 38.2716 48.25 39.8112L31 49.7705C28.3333 51.3101 27 52.0799 26 51.5026C25 50.9252 25 49.3856 25 46.3064L25 26.3878C25 23.3086 25 21.769 26 21.1917C27 20.6143 28.3333 21.3841 31 22.9237L48.25 32.883Z" fill="white"/>
                     </svg>
-                    <img className='w-[100%]' src={vidoeBackImg} alt="" />
+                    <img className='w-[100%] md:h-auto h-[300px] object-cover' src={vidoeBackImg} alt="" />
                 </div>
         </section>
     )
