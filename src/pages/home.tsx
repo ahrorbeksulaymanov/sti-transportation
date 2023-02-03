@@ -8,7 +8,7 @@ function Home() {
     <div>
       <FirstComp />
       <SecondBlock />
-      {/* <AboutPage /> */}
+      <AboutPage />
       {/* <WhyUs /> */}
     </div>
   );

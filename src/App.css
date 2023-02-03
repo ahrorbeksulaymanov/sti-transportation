@@ -35,3 +35,7 @@ th {
 .table-hover tr:hover {
   background-color: #ececec !important;
 }
+
+.font-babes{
+  font-family: 'Bebas Neue', sans-serif;
+}
