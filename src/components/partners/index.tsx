@@ -1,5 +1,4 @@
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import logo1 from '../../assets/images/partner-logo1.png'
 import logo2 from '../../assets/images/partner-logo2.png'
