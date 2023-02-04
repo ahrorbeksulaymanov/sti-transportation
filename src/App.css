@@ -57,7 +57,10 @@ th {
   height: 0;
   border: 16px solid transparent;
   border-bottom-color: rgba(255, 255, 255, 0.05);
-  rotate: -90deg;
+  /* rotate: -90deg; */
+  -webkit-transform:rotate(-90deg);
+   -moz-transform:rotate(-90deg);
+   -o-transform:rotate(-90deg); 
 }
 
 .left-arrow:after {
@@ -70,7 +73,10 @@ th {
   height: 0;
   border: 14px solid transparent;
   border-bottom-color: #141414;
-  rotate: -90deg;
+  /* rotate: -90deg; */
+  -webkit-transform:rotate(-90deg);
+   -moz-transform:rotate(-90deg);
+   -o-transform:rotate(-90deg); 
 }
 
 
