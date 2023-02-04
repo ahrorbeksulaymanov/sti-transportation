@@ -27,6 +27,8 @@ const WhySTI:React.FC = ():JSX.Element => {
         let newData = data.map(item => {
             if(item.id == id){
                 item.isOpen = !item.isOpen
+            }else{
+                item.isOpen = false
             }
             return item
         })        

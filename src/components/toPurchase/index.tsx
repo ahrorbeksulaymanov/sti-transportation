@@ -9,7 +9,7 @@ const ToPurchase = () => {
                 <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px]">Lease to <span className="text-[#EE3532]">purchase</span></h4>
                 <p className="mt-[16px] md:mb-[30px] mb-[20px] text-center md:text-[16px] text-[12px] font-[400] md:w-[55%] w-[100%] mx-auto">The biggest achievement of 2023 for the company was the start of lease to purchase offers where we have all types of trucks starting from 2019 Volvo, Freightliner and Kenworths up to 2023 ones.</p>
                 
-                <img className='w-[100%]' data-aos="fade-up"  src={purchase} alt="" />
+                <img className='w-[1079px] mx-auto' data-aos="fade-up"  src={purchase} alt="" />
                
                 <button data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" className='learn-more-btn md:text-[16px] text-[12px] bg-[#EE3532] hover:bg-[#cb2c29] md:px-[65px] px-[20px] md:py-[14px] py-[12px] rounded-[100px] flex mx-auto font-[500] md:mt-[30px] mt-[55px] uppercase' style={{alignItems:"center"}}>Purchase 
                 <svg className='md:ml-[30px] ml-[20px] md:w-[18px] w-[16px] h-[18px] ' viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">

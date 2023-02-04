@@ -21,15 +21,15 @@ const AboutPage = () => {
                 <p className="mt-[16px] md:mb-[60px] mb-[34px] text-center md:text-[16px] text-[12px] font-[400] w-[90%] mx-auto">STi Transportation inc is in the market since 2013 and one of the fastest growing companies. Company hauls all types of freight including power only loads, Amazon, UPS, FedEx loads, JB Hunt. At the meantime Company has over 50 dry van trailers to work with big brokerage companies like: C.H. Robbinson, Schneider, Hub Group, NTG Knight and Swift and others. STI Transportation Inc has over 100k miles on a daily basis and keeps on providing safe and on time pick ups and deliveries across the United States.</p>
                 <div className="flex justify-center text-center">
                     <div>
-                        <h3 className="anima-counter md:text-[36px] text-[24px] font-[700] md:leading-[44px] leading-[30px]">100K+</h3>
+                        <h3 className="md:text-[36px] text-[24px] font-[700] md:leading-[44px] leading-[30px]"><div className='anima-counter inline-block' >100</div>K+</h3>
                         <p className="text-[16px] font-[400] ">Delivered freights</p>
                     </div>
                     <div className="mx-[52px]">
-                        <h3 className="anima-counter md:text-[36px] text-[24px] font-[700] md:leading-[44px] leading-[30px]">10+</h3>
+                        <h3 className=" md:text-[36px] text-[24px] font-[700] md:leading-[44px] leading-[30px]"><div className='anima-counter inline-block' >10</div>+</h3>
                         <p className="text-[16px] font-[400] ">Years Experience</p>
                     </div>
                     <div>
-                        <h3 className="anima-counter md:text-[36px] text-[24px] font-[700] md:leading-[44px] leading-[30px]">3M+</h3>
+                        <h3 className="md:text-[36px] text-[24px] font-[700] md:leading-[44px] leading-[30px]"><div className='anima-counter inline-block' >3</div>M+</h3>
                         <p className="text-[16px] font-[400] ">Safe Miles</p>
                     </div>
                 </div>

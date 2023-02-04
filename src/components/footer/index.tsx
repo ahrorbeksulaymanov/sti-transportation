@@ -23,9 +23,9 @@ const Footer = () => {
 
                 {/* footer links */}
                 <div className="md:flex justify-between mb-[65px] mt-[42px]" style={{alignItems:"center"}}>
-                    <div className="md:flex hidden justify-start" style={{alignItems:"center"}}>
+                    <div className="md:flex hidden justify-start" style={{alignItems:"end"}}>
                         <img className='xl:w-[164px] w-[144px]' src={logo} alt="" />
-                        <p className='text-[16px] font-[400] leading-[20px] ml-[10px]' >2023. All rights reserved.</p>
+                        <p className='text-[16px] font-[400] leading-[13px] ml-[10px]' >2023. All rights reserved.</p>
                     </div>
                     <div className="md:flex justify-end md:mx-0 mx-auto" style={{alignItems:"center"}}>
                         <div className='lg:hidden block w-[280px] md:text-left text-center mx-auto'>
@@ -69,7 +69,7 @@ const Footer = () => {
                         <circle cx="35" cy="35" r="34.5" stroke="white" stroke-opacity="0.6"/>
                         <path d="M36.7678 17.2322C35.7915 16.2559 34.2085 16.2559 33.2322 17.2322L17.3223 33.1421C16.346 34.1184 16.346 35.7014 17.3223 36.6777C18.2986 37.654 19.8816 37.654 20.8579 36.6777L35 22.5355L49.1421 36.6777C50.1184 37.654 51.7014 37.654 52.6777 36.6777C53.654 35.7014 53.654 34.1184 52.6777 33.1421L36.7678 17.2322ZM32.5 51C32.5 52.3807 33.6193 53.5 35 53.5C36.3807 53.5 37.5 52.3807 37.5 51H32.5ZM32.5 19V35H37.5V19H32.5ZM32.5 35V51H37.5V35H32.5Z" fill="white" fill-opacity="0.6"/>
                     </svg>
-                    <div className="md:hidden flex justify-center" style={{alignItems:"center"}}>
+                    <div className="md:hidden flex justify-center" style={{alignItems:"end"}}>
                         <img className='w-[76px]' src={logo} alt="" />
                         <p className='text-[12px] font-[400] leading-[15px] ml-[10px]' >2023. All rights reserved.</p>
                     </div>
