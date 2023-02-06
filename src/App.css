@@ -163,3 +163,20 @@ like a tickmark */
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.video-player-animation{
+  box-sizing: content-box;
+  animation: player-animation 1s infinite;
+  border-radius: 50%;
+}
+
+@keyframes player-animation{
+  0%{
+    /* box-shadow: 0 0 2px 0 #fff; */
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  100%{
+    border: 15px solid rgba(255, 250, 250, 0);
+    /* box-shadow: 0 0 20px 0 #fff; */
+  }
+}
