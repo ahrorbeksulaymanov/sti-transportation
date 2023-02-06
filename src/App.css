@@ -186,7 +186,6 @@ like a tickmark */
 /*  header menu link effect  */
 
 .header-menu-effect {
-  display: inline-block;
   position: relative;
   cursor: pointer;
 }
