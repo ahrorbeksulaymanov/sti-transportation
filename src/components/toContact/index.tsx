@@ -36,12 +36,12 @@ const ToContact = () => {
                             </div>
                         </div>
                         <div className="sm:col-span-6 col-span-12">
-                            <button className='w-[100%] learn-more-btn text-[14px] leading-[114%] bg-orange hover:bg-[#cb2c29] py-[20px] rounded-[4px] font-[500] uppercase' style={{alignItems:"center"}}>REQUEST A CALL</button>
+                            <button className='w-[100%] learn-more-btn text-[14px] leading-[114%] bg-orange hover:bg-orange_hover py-[20px] rounded-[4px] font-[500] uppercase' style={{alignItems:"center"}}>REQUEST A CALL</button>
                         </div>
                         <div className="sm:col-span-6 col-span-12 sm:block hidden">
                             <div className="flex pl-[30px] mt-2">
                                 <label className="form-checkbox2">
-                                    <p className='text-[14px] leading-[18px] ml-[14px] text-[#fff] opacity-[0.6]'>“I agree to the <a className='text-[#0078BC]' href="#">terms and conditions</a> <br /> as set out by the user agreement.”</p>
+                                    <p className='text-[14px] leading-[18px] ml-[14px] text-[#fff] opacity-[0.6]'>“I agree to the <a className='text-[#0078BC] hover:underline' href="#">terms and conditions</a> <br /> as set out by the user agreement.”</p>
                                     <input type="checkbox" />
                                     <span className="form-checkbox2-span"></span>
                                 </label>

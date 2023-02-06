@@ -15,7 +15,7 @@ const Location = () => {
                             <p className='text-[12px] font-[400] leading-[150%]'>US MAP</p>
                             <p className='text-[12px] font-[400] leading-[150%]'>Address: 4361 Teak cir</p>
                             <p className='text-[12px] font-[400] leading-[150%]'>Naperville, IL 60564</p>
-                            <button className='text-[12px] font-[400] bg-orange hover:bg-[#cc2f2c] rounded-[7px] w-[100%] py-[10px] mt-[10px]'>Go to map</button>
+                            <button className='text-[12px] font-[400] bg-orange hover:bg-orange_hover rounded-[7px] w-[100%] py-[10px] mt-[10px]'>Go to map</button>
                         </div>
                     </div>
                     <img className='w-[100%]'  src={purchase} alt="" />

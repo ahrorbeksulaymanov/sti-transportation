@@ -2,6 +2,7 @@ import logo from '../../assets/images/logo-text.png'
 
 const Footer = () => {
 
+
     return(
         <footer className="md:mt-[270px] mt-[180px] text-[#fff]">
             <div className="my-container">
@@ -14,7 +15,7 @@ const Footer = () => {
                         <p className="md:text-[18px] text-[14px] md:leading-[22px] leading-[17px] md:mr-[40px] md:text-left text-center md:mb-0 mb-[12px]">Lease to purchase</p>
                         <p className="md:text-[18px] text-[14px] md:leading-[22px] leading-[17px] md:mr-[40px] md:text-left text-center">Contact</p>
                     </div>
-                    <svg className="w-[60px] h-[60px] cursor-pointer md:block hidden" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg onClick={() => window.scrollTo(0, 0)} className="w-[60px] h-[60px] cursor-pointer md:block hidden duration-[0.2s] hover:translate-y-[-10px] " viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="35" cy="35" r="35" fill="black"/>
                         <circle cx="35" cy="35" r="34.5" stroke="white" stroke-opacity="0.6"/>
                         <path d="M36.7678 17.2322C35.7915 16.2559 34.2085 16.2559 33.2322 17.2322L17.3223 33.1421C16.346 34.1184 16.346 35.7014 17.3223 36.6777C18.2986 37.654 19.8816 37.654 20.8579 36.6777L35 22.5355L49.1421 36.6777C50.1184 37.654 51.7014 37.654 52.6777 36.6777C53.654 35.7014 53.654 34.1184 52.6777 33.1421L36.7678 17.2322ZM32.5 51C32.5 52.3807 33.6193 53.5 35 53.5C36.3807 53.5 37.5 52.3807 37.5 51H32.5ZM32.5 19V35H37.5V19H32.5ZM32.5 35V51H37.5V35H32.5Z" fill="white" fill-opacity="0.6"/>

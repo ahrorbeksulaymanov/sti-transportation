@@ -12,11 +12,11 @@ const Header = () => {
                         <img className='lg:w-[230px] sm:w-[180px] w-[148px]' src={Logo} alt="" />
                     </div>
                     <div className="flex justify-end" style={{alignItems:"center"}} >
-                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden'>About</p>
-                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden'>Why STI</p>
-                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden'>Lease to purchase</p>
-                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden'>Contact</p>
-                        <button className='bg-orange lg:px-[21px] sm:px-[18px] px-[10px] lg:py-[12px] py-[10px] rounded-[100px] lg:text-[16px] sm:text-[14px] text-[12px] hover:bg-[#c02c29]'>Become a driver</button>
+                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>About</p>
+                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Why STI</p>
+                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Lease to purchase</p>
+                        <p className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Contact</p>
+                        <button className='bg-orange lg:px-[21px] sm:px-[18px] px-[10px] lg:py-[12px] py-[10px] rounded-[100px] lg:text-[16px] sm:text-[14px] text-[12px] hover:bg-orange_hover'>Become a driver</button>
                     </div>
                 </div>
             </div>

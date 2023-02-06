@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      orange: "#EE3532"
+      orange: "#EE3532",
+      orange_hover: "#cb2c29"
     },
     screens: {
       'sm': '576px',
