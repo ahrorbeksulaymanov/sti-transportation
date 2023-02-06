@@ -43,7 +43,7 @@ const WhyUs:React.FC = ():JSX.Element => {
         <section className="my-container text-white">
             <div className="md:pt-[140px] pt-[60px]">
                 <p className="text-[#D94747] text-center text-[24px] mb-[8px]">Lorem</p>
-                <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px] mb-[44px]">WHY CHOOSE <span className="text-[#EE3532]">US?</span></h4>
+                <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px] mb-[44px]">WHY CHOOSE <span className="text-orange">US?</span></h4>
                 <div className="grid grid-cols-12 md:gap-[30px] gap-[14px]">
                     {data1.map((item:Data, index:number) => (
                         <div data-aos={width > 768 ? (index === 0 ? "fade-right" : "fade-left") : "zoom-in-up"} key={index} style={{borderColor:"rgba(255, 255, 255, 0.05)"}} className="md:col-span-6 col-span-12 rounded-[4px] bg-[#111] border-[1px] border-solid hover:bg-[#D94747] cursor-pointer duration-[0.2s] py-[24px] px-[20px]">

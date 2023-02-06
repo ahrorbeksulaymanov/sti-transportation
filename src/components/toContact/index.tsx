@@ -6,7 +6,7 @@ const ToContact = () => {
         <section className="my-container text-white">
             <div className="md:pt-[140px] pt-[60px]">
                 <p className="text-[#D94747] text-center text-[24px] mb-[8px]">Contact</p>
-                <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px]">Have any questions? <span className="text-[#EE3532]">contact us!</span></h4>
+                <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px]">Have any questions? <span className="text-orange">contact us!</span></h4>
                 <p className="mt-[16px] md:mb-[90px] mb-[82px] text-center md:text-[20px] text-[14px] leading-[130%] text-[#fff] opacity-[0.7] font-[400] md:w-[48%] w-[100%] mx-auto">Send info to our email hr@stitruckers.com or Fill out the form, and we will reach you.</p>
                 
                 <form className='lg:w-[788px] md:w-[708px] mx-auto'>
@@ -36,7 +36,7 @@ const ToContact = () => {
                             </div>
                         </div>
                         <div className="sm:col-span-6 col-span-12">
-                            <button className='w-[100%] learn-more-btn text-[14px] leading-[114%] bg-[#EE3532] hover:bg-[#cb2c29] py-[20px] rounded-[4px] font-[500] uppercase' style={{alignItems:"center"}}>REQUEST A CALL</button>
+                            <button className='w-[100%] learn-more-btn text-[14px] leading-[114%] bg-orange hover:bg-[#cb2c29] py-[20px] rounded-[4px] font-[500] uppercase' style={{alignItems:"center"}}>REQUEST A CALL</button>
                         </div>
                         <div className="sm:col-span-6 col-span-12 sm:block hidden">
                             <div className="flex pl-[30px] mt-2">

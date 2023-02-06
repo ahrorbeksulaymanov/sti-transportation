@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      orange: "#EE3532"
+    },
     screens: {
       'sm': '576px',
       // => @media (min-width: 576px) { ... }

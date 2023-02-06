@@ -5,7 +5,7 @@ import 'swiper/css';
 
 function App() {
   return (
-    <div>
+    <div className='text-[#fff]'>
       <ParallaxProvider>
         <RoutesMiddleware />
       </ParallaxProvider>

@@ -16,7 +16,7 @@ const FirstComp:React.FC = ():JSX.Element => {
                     </Parallax>
                 </div>
                 <img data-aos="fade-up" data-aos-duration="3000" className='md:w-[94%] w-[100%] absolute md:left-[3%] left-0 lg:top-[180px] md:top-[230px] sm:top-[90px] top-[-30px] z-[1]' src={mainTruck} alt="" />
-            </div>
+              </div>
         </div>
     )
 }
