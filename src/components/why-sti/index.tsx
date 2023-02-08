@@ -36,7 +36,7 @@ const WhySTI:React.FC = ():JSX.Element => {
     }
 
     return (
-        <section className="my-container text-white">
+        <section id='why-sti' className="my-container text-white">
             <div className="md:pt-[140px] pt-[60px]">
                 <p className="text-[#D94747] text-center text-[24px] mb-[8px]">Why STI ?</p>
                 <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px]">Manage your package All over <span className="text-orange">48 states</span></h4>

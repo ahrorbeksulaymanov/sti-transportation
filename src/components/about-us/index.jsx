@@ -14,7 +14,7 @@ const AboutPage = () => {
     }, [])
 
     return (
-        <section className="md:mt-[140px] mt-[60px] text-white mb-[200px]">
+        <section id='about-us' className="md:mt-[140px] mt-[60px] text-white mb-[200px]">
             <div className="my-container">
                 <p className="text-[#D94747] text-center text-[24px] mb-[8px]">About US</p>
                 <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px] ">STI Transportation</h4>

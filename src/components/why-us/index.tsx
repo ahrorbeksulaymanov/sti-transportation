@@ -1,4 +1,4 @@
-import useWindowSize from "../../custom-hooks/useWindowSize/useWindowSize"
+import useWindowSize from "../../custom-hooks/useWindowSize"
 
 type Data = {
     num: String

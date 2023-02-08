@@ -7,29 +7,22 @@
         transform: translate(-50%, 0%);
     }
     h1{
-        z-index: 1 !important;
         font-family: 'Bebas Neue', sans-serif;
         font-style: normal;
         font-weight: 400;
         text-align: center;
         color: rgba(255, 255, 255, 0.07);
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-strokeWidth: 2px;
         -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
-        // backdrop-filter: blur(22px);
     }
     h3{
-        z-index: 1 !important;
         font-family: 'Bebas Neue', sans-serif;
         font-style: normal;
         font-weight: 400;
         text-align: center;
         color: rgba(255, 255, 255, 0.07);
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-strokeWidth: 2px;
         -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
-        // backdrop-filter: blur(22px);
-    }
-    img{
-        z-index: 1000 !important;
     }
 }
 

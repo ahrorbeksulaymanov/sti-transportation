@@ -1,6 +1,5 @@
 import TruckTable from "../components/admin-trucks";
 import Login from "../components/login";
-import WhyUs from "../components/why-us";
 import Home from "../pages/home";
 
 // import 
@@ -22,7 +21,7 @@ export const public_routes = [
         exact: true,
         config: {
           showLink: false,
-          structure: "clientLayout",
+          structure: "noneLayout",
         },
       }
 ] 

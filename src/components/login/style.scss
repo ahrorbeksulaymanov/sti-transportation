@@ -1,6 +1,11 @@
 .login-page{
-    background: rgb(131,80,164);
-    background: radial-gradient(circle, rgba(131,80,164,1) 0%, rgba(52,7,61,1) 65%);
+    background: rgb(222,98,98);
+    background: linear-gradient(90deg, rgba(222,98,98,1) 0%, rgba(255,184,140,1) 50%);
+            input{
+        &::placeholder{
+            color: rgba(0, 0, 0, .3);
+        }
+    }
 }
 .login-form-wrapper{
     transform: translate(-50%, -50%);

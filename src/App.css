@@ -6,13 +6,22 @@
   @apply container mx-auto md:w-auto w-[96%];
 }
 
+/* header blur class */
+
+.header-blur-class{
+  background: linear-gradient(116.71deg, #222222 -2.97%, rgba(30, 30, 30, 0) 103.71%);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(10px);
+  transition: 0.2s;
+}
+
 thead,
 tbody,
 tfoot,
 tr,
 td,
 th {
-  border: 1px solid #eff2f7 !important;
+  border: 1px solid #383838 !important;
 }
 td,
 th {
@@ -20,12 +29,12 @@ th {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f7f7f7;
+  background-color: #232323;
   color: var(--bs-table-striped-color) !important;
 }
 
 .table-hover tr:hover {
-  background-color: #ececec !important;
+  background-color: #232323 !important;
 }
 
 .font-babes{

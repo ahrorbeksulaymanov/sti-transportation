@@ -7,7 +7,10 @@ module.exports = {
     extend: {},
     colors: {
       orange: "#EE3532",
-      orange_hover: "#cb2c29"
+      orange_hover: "#cb2c29",
+      white: "#fff",
+      black: "#000",
+      seriy: "#383838"
     },
     screens: {
       'sm': '576px',

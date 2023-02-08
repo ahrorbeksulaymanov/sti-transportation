@@ -3,7 +3,7 @@ import purchase from '../../assets/images/to-purchase-img.png'
 const ToContact = () => {
 
     return (
-        <section className="my-container text-white">
+        <section id='contact' className="my-container text-white">
             <div className="md:pt-[140px] pt-[60px]">
                 <p className="text-[#D94747] text-center text-[24px] mb-[8px]">Contact</p>
                 <h4 className="font-babes md:text-[52px] text-[36px] text-center font-[400] md:leading-[63px] leading-[43px]">Have any questions? <span className="text-orange">contact us!</span></h4>
