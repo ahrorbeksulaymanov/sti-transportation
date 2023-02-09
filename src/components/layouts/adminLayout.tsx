@@ -16,15 +16,15 @@ const AdminLayout = ({children}: any) => {
             .then((res) => {
               if(!res?.data?.data){
                 navigate('/login')
-                localStorage.clear();
+                localStorage.removeItem("access_token");
               }
             })
             .catch((err) => {
               navigate('/login')
-              localStorage.clear();
+              localStorage.removeItem("access_token");
             });
       } else {
-        localStorage.clear();
+        localStorage.removeItem("access_token");
         navigate('/login') 
       }
     }, [])

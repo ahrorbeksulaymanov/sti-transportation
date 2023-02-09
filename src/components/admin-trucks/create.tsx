@@ -11,7 +11,6 @@ const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
 
     const saveItem = (e:any) => {
         e.preventDefault()
-        console.log(e.target.name.value);
         const formdata = new FormData();
         formdata.append("name", e.target.name.value)
         formdata.append("description", e.target.description.value)

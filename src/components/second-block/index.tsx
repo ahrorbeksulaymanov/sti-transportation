@@ -4,8 +4,8 @@ const SecondBlock = () => {
     return (
         <section className="second-block lg:mt-[250px] md:mt-[100px] mt-[10px] text-white">
             <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-                <h1 className="lg:text-[140px] md:text-[100px] text-[36px]">WE ARE <span className="text-orange">TRUCKING</span></h1>
-                <h1 className="lg:text-[140px] md:text-[100px] text-[36px]">INDUSTRY <span className="text-orange">EXPERTS</span></h1>
+                <h1 className="lg:text-[140px] md:text-[100px] text-[36px] second-text">WE ARE <span className="text-orange">TRUCKING</span></h1>
+                <h1 className="lg:text-[140px] md:text-[100px] text-[36px] second-text">INDUSTRY <span className="text-orange">EXPERTS</span></h1>
             </div>
             <p data-aos="fade-up" data-aos-anchor-placement="center-bottom" className='lg:text-[22px] md:text-[20px] text-[12px] md:w-[670px] sm:w-[60%] w-[80%]  mx-auto text-center mt-[20px] leading-[132%]'>To get fast and reliable for your cargo with our loyal and experienced drivers where everyone treated as a family member. Learn more in a detaile I wav here</p>
             <button data-aos="fade-up" data-aos-anchor-placement="center-bottom" className='learn-more-btn md:text-[16px] text-[12px] bg-orange hover:bg-orange_hover md:px-[51px] px-[22px] md:py-[14px] py-[12px] rounded-[100px] flex mx-auto font-[500] md:mt-[35px] mt-[51px]' style={{alignItems:"center"}}>LEARN MORE 

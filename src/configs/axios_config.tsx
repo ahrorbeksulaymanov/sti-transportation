@@ -1,4 +1,6 @@
+import { message } from "antd";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 import { PATH_API } from "../constants";
 
 const instance = axios.create();
@@ -11,7 +13,7 @@ const onFulfilledReq = (config:any) => {
 };
 
 const onRejectedReq = (config:any) => {
-  return config;
+    return config;
 };
 
 instance.interceptors.request.use(onFulfilledReq, onRejectedReq);
@@ -21,8 +23,14 @@ const onFulfilledRes = (config:any) => {
 };
 
 const onRejectedRes = (config:any) => {
-  console.log(config);
-//   alert(config?.response?.data?.message);
+
+  message.error(config?.response?.data?.detail?.message)
+  console.log("eee",config?.response?.data?.detail?.message, config?.response?.status == 403);
+  
+  if(config?.response?.status == 403){
+    <Navigate to="/login" replace />    
+  }
+
   return config;
 };
 

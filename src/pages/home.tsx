@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import AboutPage from '../components/about-us';
 import FirstComp from '../components/first-comp';
 import Footer from '../components/footer';
@@ -10,6 +11,11 @@ import WhySTI from '../components/why-sti';
 import WhyUs from '../components/why-us';
 
 function Home() {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+  
   return (
     <div>
       <FirstComp />

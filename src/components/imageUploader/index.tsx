@@ -20,7 +20,7 @@ class PicturesWall extends React.Component<any, any>  {
 
   handleCancel = () => this.setState({ previewVisible: false });
 
-  handlePreview = async (file:any) => {
+  handlePreview = async (file:any) => {    
     if (!file.url && !file.preview) {
       file.preview = await getBase64(file.originFileObj);
     }
@@ -33,14 +33,17 @@ class PicturesWall extends React.Component<any, any>  {
     });
   };
 
-  handleChange = ({ fileList }:any) => this.props.setimages(fileList);
+  handleChange = ({ fileList }:any) => {
+    this.props.setimages(fileList)
+  };
 
   render() {
     const { previewVisible, previewImage, previewTitle } = this.state;
+    
     const uploadButton = (
       <div>
         +
-        <div style={{ marginTop: 8 }}>Yuklash</div>
+        <div style={{ marginTop: 8 }}>Upload</div>
       </div>
     );
 
@@ -53,13 +56,15 @@ class PicturesWall extends React.Component<any, any>  {
           fileList={this.props.images}
           onPreview={this.handlePreview}
           onChange={this.handleChange}
-          customRequest={({ onSuccess }:any) => {
+          beforeUpload={this.props.beforeUpload}
+          onRemove={this.props.onRemove}
+          customRequest={({ onSuccess }:any) => {            
             setTimeout(() => {
               onSuccess("ok");
             }, 0);
           }}
         >
-          {this.props.images.length >= this.props.maxCount ? null : uploadButton}
+          {this.props.images?.length >= this.props.maxCount ? null : uploadButton}
         </Upload>
         <Modal
           open={previewVisible}

@@ -1,6 +1,7 @@
 import TruckTable from "../components/admin-trucks";
 import Login from "../components/login";
 import Home from "../pages/home";
+import Purchase from "../pages/purchase";
 
 // import 
 export const public_routes = [
@@ -8,6 +9,16 @@ export const public_routes = [
       title: "Main page",
       path: "/",
       component: Home,
+      exact: true,
+      config: {
+        showLink: false,
+        structure: "clientLayout",
+      },
+    },
+    {
+      title: "Purchase",
+      path: "/purchase",
+      component: Purchase,
       exact: true,
       config: {
         showLink: false,
