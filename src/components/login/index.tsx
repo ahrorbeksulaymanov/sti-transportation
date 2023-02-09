@@ -40,7 +40,7 @@ const Login = () => {
 
     return (
         <section className="login-page h-[100vh] relative">
-            <div className="text-black login-form-wrapper absolute top-[50%] left-[50%] w-[600px] bg-white rounded-xl p-10">
+            <div className="text-black login-form-wrapper absolute top-[50%] left-[50%] w-[600px] rounded-xl p-10">
                 <h1 className='font-[700] text-[24px]'>Wellcome to login page</h1>
                 {error.isError ? <p className='text-[red]'>{error.msg}</p>:""}
                 <form onSubmit={loginFunc}>

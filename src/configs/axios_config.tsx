@@ -25,10 +25,10 @@ const onFulfilledRes = (config:any) => {
 const onRejectedRes = (config:any) => {
 
   message.error(config?.response?.data?.detail?.message)
-  console.log("eee",config?.response?.data?.detail?.message, config?.response?.status == 403);
   
   if(config?.response?.status == 403){
-    <Navigate to="/login" replace />    
+    // <Navigate to="/login" replace /> 
+    window.location.href = '/login'   
   }
 
   return config;
