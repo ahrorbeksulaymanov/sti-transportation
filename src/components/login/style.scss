@@ -1,6 +1,4 @@
 .login-page{
-    // background: rgb(222,98,98);
-    // background: linear-gradient(90deg, rgba(222,98,98,1) 0%, rgba(255,184,140,1) 50%);
     background-repeat: no-repeat;
     background: url(../../assets/images/truck-back.avif);
     background-size: cover;
@@ -12,7 +10,6 @@
 }
 .login-form-wrapper{
     transform: translate(-50%, -50%);
-    // background-color: rgba(0, 0, 0, 0.4);
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     input{

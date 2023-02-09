@@ -1,11 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png'
 import useScrollTop from '../../custom-hooks/useOnscrollTopHeight';
 
 
 const Header = () => {
 
-    const topScroll = useScrollTop()    
+    const topScroll = useScrollTop()
+
+    const navigate = useNavigate()
+    
+    const relocate = async (id:string) => {
+        await navigate("/");
+        window.location.href = id;
+    }
 
     return(
         <>
@@ -21,11 +28,11 @@ const Header = () => {
                             </Link>
                         </div>
                         <div className="flex justify-end" style={{alignItems:"center"}} >
-                            <a href='#about-us' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>About</a>
-                            <a href='#why-sti' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Why STI</a>
+                            <p onClick={() => relocate("#about-us")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>About</p>
+                            <p onClick={() => relocate("#why-sti")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Why STI</p>
                             <Link to={'/purchase'} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Lease to purchase</Link>
-                            <a href='#contact' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Contact</a>
-                            <button className='bg-orange lg:px-[21px] sm:px-[18px] px-[10px] lg:py-[12px] py-[10px] rounded-[100px] lg:text-[16px] sm:text-[14px] text-[12px] hover:bg-orange_hover'>Become a driver</button>
+                            <p onClick={() => relocate("#contact")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Contact</p>
+                            <a target={'_blank'} href='https://intelliapp.driverapponline.com/c/stitransportationinc?uri_b=ia_stitransportationinc_740871219' className='bg-orange lg:px-[21px] sm:px-[18px] px-[10px] lg:py-[12px] py-[10px] rounded-[100px] lg:text-[16px] sm:text-[14px] text-[12px] hover:bg-orange_hover'>Become a driver</a>
                         </div>
                     </div>
                 </div>
@@ -43,11 +50,11 @@ const Header = () => {
                             </Link>
                         </div>
                         <div className="flex justify-end" style={{alignItems:"center"}} >
-                            <a href='#about-us' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>About</a>
-                            <a href='#why-sti' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Why STI</a>                            
+                            <p onClick={() => relocate("#about-us")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>About</p>
+                            <p onClick={() => relocate("#why-sti")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Why STI</p>                            
                             <Link to='/purchase' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Lease to purchase</Link>
-                            <a href='#contact' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Contact</a>
-                            <button className='bg-orange lg:px-[21px] sm:px-[18px] px-[10px] lg:py-[12px] py-[10px] rounded-[100px] lg:text-[16px] sm:text-[14px] text-[12px] hover:bg-orange_hover'>Become a driver</button>
+                            <p onClick={() => relocate("#contact")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Contact</p>
+                            <a target={'_blank'} href='https://intelliapp.driverapponline.com/c/stitransportationinc?uri_b=ia_stitransportationinc_740871219' className='bg-orange lg:px-[21px] sm:px-[18px] px-[10px] lg:py-[12px] py-[10px] rounded-[100px] lg:text-[16px] sm:text-[14px] text-[12px] hover:bg-orange_hover'>Become a driver</a>
                         </div>
                     </div>
                 </div>

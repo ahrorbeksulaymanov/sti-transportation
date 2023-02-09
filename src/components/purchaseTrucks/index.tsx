@@ -27,7 +27,7 @@ const PurchaseTrucks = () => {
                 {
                     data?.map((item:any, index:number) => (
                         index % 2 == 0 ?
-                        <div key={item?.id} data-aos="fade-up" className="grid grid-cols-12 xl:gap-0 md:gap-x-[40px] gap-0 md:mb-[125px] mb-[50px]">
+                        <div key={item?.id} data-aos="fade-up" className="grid grid-cols-12 xl:gap-0 md:gap-x-[40px] md:mb-[125px] mb-[50px]">
                             {/* first block  */}
                             <div className="md:col-span-4 col-span-12 my-auto">
                                 <h3 className="uppercase xl:text-[76px] md:text-[60px] text-[36px] font-babes xl:leading-[91px] md:leading-[70px] leading-[43px]">{item?.name}</h3>
@@ -46,7 +46,7 @@ const PurchaseTrucks = () => {
                                 </div>
                             </div>
                         </div>:
-                        <div key={item?.id} data-aos="fade-up" className="grid grid-cols-12 xl:gap-0 md:gap-x-[40px] gap-0 md:mb-[125px] mb-[50px]">
+                        <div key={item?.id} data-aos="fade-up" className="grid grid-cols-12 xl:gap-[20px] md:gap-x-[40px] gap-0 md:mb-[125px] mb-[50px]">
                             {/* second block  */}
                             <div className="md:col-span-4 col-span-12 my-auto md:hidden block">
                                 <div className='xl:pl-[83px] md:pl-[33px]'>

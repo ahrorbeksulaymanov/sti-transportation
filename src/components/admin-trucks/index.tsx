@@ -1,5 +1,5 @@
 import { Empty, message, Modal, Popconfirm, Switch } from "antd";
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import instance from "../../configs/axios_config";
 import CreateData from "./create";
 import UpdateData from "./edit";
@@ -33,6 +33,17 @@ const TruckTable = () => {
             message.success("Ma'lumot o'chirildi!")
           });
     }
+
+    // const deleteItem = useCallback((id:number) => {
+    //     instance({
+    //         url: `/v1/track/${id}`,
+    //         method: "delete",
+    //       }).then((res:any) => {
+    //         setrefresh(!refresh)
+    //         message.success("Ma'lumot o'chirildi!")
+    //       });
+    // }, [refresh])
+    
 
     const viewItem = (item:any) => {
         setIsOpenView(true)
@@ -82,7 +93,7 @@ const TruckTable = () => {
                                 <td>{index+1}</td>
                                 <td>{item?.name}</td>
                                 <td>
-                                    <Switch defaultChecked={item.is_active} onChange={(e) => changeStatus(item?.id, e)} className="mr-3 bg-[#faad14] hover:bg-[#ca8e16]" />
+                                    <Switch checked={item?.is_active} onChange={(e) => changeStatus(item?.id, e)} className="mr-3 bg-[#faad14] hover:bg-[#ca8e16]" />
                                     {
                                         item.is_active ? 
                                         <span className="bg-[#52c41a] text-[14px] text-white px-3 py-1 rounded-full">Active</span>
