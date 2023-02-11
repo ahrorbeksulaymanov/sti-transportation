@@ -1,12 +1,12 @@
-import { Empty, message, Popconfirm, Switch } from "antd";
-import { useCallback, useEffect, useState } from "react"
+import { Empty, message, Popconfirm } from "antd";
+import { useEffect, useState } from "react"
 import instance from "../../configs/axios_config";
 import Loader from "../loader";
 import CreateData from "./create";
 import UpdateData from "./edit";
 import ViewItem from "./view";
 
-const TruckTable = () => {
+const BlogsTable = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [refresh, setrefresh] = useState(false)
@@ -19,7 +19,7 @@ const TruckTable = () => {
     useEffect(() => {
         setloading(true)
         instance({
-            url: "/v1/track/list",
+            url: "/v1/blog/list",
             method: "get",
           }).then((res:any) => {
             if(res?.data?.data){
@@ -31,7 +31,7 @@ const TruckTable = () => {
 
     const deleteItem = (id:number) => {
         instance({
-            url: `/v1/track/${id}`,
+            url: `/v1/blog/${id}`,
             method: "delete",
           }).then((res:any) => {
             setrefresh(!refresh)
@@ -39,7 +39,6 @@ const TruckTable = () => {
           });
     }
     
-
     const viewItem = (item:any) => {
         setIsOpenView(true)
         setselectedItem(item)
@@ -50,23 +49,10 @@ const TruckTable = () => {
         setselectedItem(item)
     }
 
-    const changeStatus = (id:number, isActive:boolean) => {
-        instance({
-            url: `/v1/track/${id}`,
-            method: "patch",
-            data:{
-                is_active: isActive
-            }
-          }).then((res:any) => {
-            setrefresh(!refresh)
-            message.success("Status o'zgartirildi!")
-          });
-    }
-
     return(
         <section className="my-8 my-container">
             <div className="flex justify-between mb-3" style={{alignItems:"center"}}>
-                <h3 className="font-bold">Trucks list</h3>
+                <h3 className="font-bold">Blogs list</h3>
                 <button onClick={() => setIsOpen(true)} className="bg-orange rounded-md px-6 py-2 hover:bg-orange_hover">Add + </button>
             </div>
             {loading ? <Loader /> : data?.length != 0 ?
@@ -74,10 +60,8 @@ const TruckTable = () => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th>Price ($)</th>
-                        <th>Description</th>
+                        <th>Blog title</th>
+                        <th>File type</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -86,17 +70,8 @@ const TruckTable = () => {
                         data?.map((item:any, index:number) => (
                             <tr key={index}>
                                 <td>{index+1}</td>
-                                <td>{item?.name}</td>
-                                <td>
-                                    <Switch checked={item?.is_active} onChange={(e) => changeStatus(item?.id, e)} className="mr-3 bg-[#faad14] hover:bg-[#ca8e16]" />
-                                    {
-                                        item.is_active ? 
-                                        <span className="bg-[#52c41a] text-[14px] text-white px-3 py-1 rounded-full">Active</span>
-                                        :<span className="bg-[#faad14] text-[14px] text-white px-3 py-1 rounded-full">Sold out</span>
-                                    }
-                                </td>
-                                <td>{item?.price} </td>
-                                <td>{item?.description}</td>
+                                <td>{item?.title}</td>
+                                <td>{item?.type == 1 ? "Image" : "Video"} </td>
                                 <td>
                                     <div className="flex">
                                         <svg onClick={() => viewItem(item)} className='cursor-pointer text-[#95de64]' width={20} height={20} fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -136,4 +111,4 @@ const TruckTable = () => {
         </section>
     )
 }
-export default TruckTable
+export default BlogsTable

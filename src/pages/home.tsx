@@ -7,6 +7,7 @@ import Partners from '../components/partners';
 import SecondBlock from '../components/second-block';
 import ToContact from '../components/toContact';
 import ToPurchase from '../components/toPurchase';
+import ToTop from '../components/toTopButton';
 import WhySTI from '../components/why-sti';
 import WhyUs from '../components/why-us';
 
@@ -28,6 +29,7 @@ function Home() {
       <Location />
       <ToContact />
       <Footer />
+      <ToTop />
     </div>
   );
 }

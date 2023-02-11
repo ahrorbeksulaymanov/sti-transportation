@@ -1,3 +1,5 @@
+import BlogsTable from "../components/admin-blogs";
+import CommentsTable from "../components/admin-comments";
 import TruckTable from "../components/admin-trucks";
 import Login from "../components/login";
 import Home from "../pages/home";
@@ -42,6 +44,28 @@ export const private_rotes = [
       title: "Home page",
       path: "/admin",
       component: TruckTable,
+      exact: true,
+      config: {
+        key: "*",
+        showLink: true,
+        structure: "layout",
+      },
+    },
+    {
+      title: "Comments",
+      path: "/comments",
+      component: CommentsTable,
+      exact: true,
+      config: {
+        key: "*",
+        showLink: true,
+        structure: "layout",
+      },
+    },
+    {
+      title: "Blogs",
+      path: "/blogs",
+      component: BlogsTable,
       exact: true,
       config: {
         key: "*",

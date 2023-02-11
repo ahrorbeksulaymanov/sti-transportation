@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import instance from "../../configs/axios_config";
 
 const AdminLayout = ({children}: any) => {
@@ -34,8 +34,9 @@ const AdminLayout = ({children}: any) => {
             <header className="bg-seriy py-5">
                 <div className="my-container">
                     <div className="flex">
-                        <h1 className="mr-8">Trucks</h1>
-                        <h1>Blogs</h1>
+                        <Link to='/admin'>Trucks</Link>
+                        <Link className="mx-8" to='/comments'>Comments</Link>
+                        <Link to='/blogs'>Blogs</Link>
                     </div>
                 </div>
             </header>

@@ -28,6 +28,7 @@ const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
                 message.success("Ma'lumot yaratildi!")
                 setIsOpen(false)
                 setrefresh(!refresh)
+                e.target.reset()
             }
         });
     }

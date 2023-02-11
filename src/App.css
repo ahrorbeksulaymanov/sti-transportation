@@ -57,16 +57,16 @@ th {
   content: '';
   display: block;  
   position: absolute;
-  top: 35px;
-  right: 100%;
+  top: 34px;
+  left: 100%;
   width: 0;
   height: 0;
   border: 16px solid transparent;
-  border-bottom-color: rgba(255, 255, 255, 0.05);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
   /* rotate: -90deg; */
-  -webkit-transform:rotate(-90deg);
-   -moz-transform:rotate(-90deg);
-   -o-transform:rotate(-90deg); 
+  -webkit-transform:rotate(90deg);
+   -moz-transform:rotate(90deg);
+   -o-transform:rotate(90deg); 
 }
 
 .left-arrow:after {
@@ -74,15 +74,15 @@ th {
   display: block;  
   position: absolute;
   top: 36px;
-  right: 100%;
+  left: 100%;
   width: 0;
   height: 0;
   border: 14px solid transparent;
   border-bottom-color: #141414;
   /* rotate: -90deg; */
-  -webkit-transform:rotate(-90deg);
-   -moz-transform:rotate(-90deg);
-   -o-transform:rotate(-90deg); 
+  -webkit-transform:rotate(90deg);
+   -moz-transform:rotate(90deg);
+   -o-transform:rotate(90deg); 
 }
 
 
@@ -208,10 +208,11 @@ like a tickmark */
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-
-.header-menu-effect:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+@media only screen and (min-width: 768px) {
+  .header-menu-effect:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 .second-text{
@@ -227,4 +228,49 @@ like a tickmark */
 .sale-badge{
   transform: rotate(-30deg);
   box-shadow: 2px 2px 0px #9C0603;
+}
+
+/* footer-madia-icon */
+.footer-madia-icon{
+  fill: #fff;
+  cursor: pointer;
+}
+.footer-madia-icon:hover{
+  animation: footer-icon-animation 0.2s ease-in-out 1;
+  fill: #EE3532;
+}
+
+@keyframes footer-icon-animation{
+  0%{
+    transform: translate(0px, 0);
+  }
+  50%{
+    transform: translate(0px, -5px);
+  }
+  100%{
+    transform: translate(0px, 0);
+  }
+}
+
+
+.check-comment-agree{
+  animation: check-comment 0.4s ease-in-out;
+}
+
+@keyframes check-comment{
+  0%{
+    transform: translate(15px, 0);
+  }
+  25%{
+    transform: translate(-15px, 0);
+  }
+  50%{
+    transform: translate(10px, 0);
+  }
+  75%{
+    transform: translate(-10px, 0);
+  }
+  100%{
+    transform: translate(10px, 0);
+  }
 }
