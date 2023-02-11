@@ -1,5 +1,5 @@
 import { Input, message, Modal, Segmented } from "antd";
-import { useState } from "react"
+import { useRef, useState } from "react"
 import instance from "../../configs/axios_config";
 import PicturesWall from "../imageUploader";
 
@@ -8,6 +8,7 @@ const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
 
     const [image, setimage] = useState<any>([])
     const [is_active, setis_active] = useState<any>("1")
+    const form:any = useRef(null);
 
     const saveItem = (e:any) => {
         e.preventDefault()
@@ -27,16 +28,17 @@ const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
                 setIsOpen(false)
                 setrefresh(!refresh)
                 e.target.reset()
+                form?.current?.reset()
             }
         });
     }
 
     return(
 
-            <Modal title="Blog add" footer={false} width={1000} open={isOpen} onOk={() => setIsOpen(false)} onCancel={() => setIsOpen(false)}>
+            <Modal title="Blog add" footer={false} width={1000} open={isOpen} onOk={() => {setIsOpen(false); form.current.reset()}} onCancel={() => {setIsOpen(false); form?.current?.reset()}}>
                 <hr className="mb-4" />
                 <PicturesWall setimages={setimage} images={image} maxCount={1} />
-                <form onSubmit={saveItem}>
+                <form ref={form} onSubmit={saveItem}>
                     <div className="grid grid-cols-6 gap-3">
                         <div className="col-span-3">
                             <label htmlFor="" className="mt-3 mb-2 block">Blog title</label>

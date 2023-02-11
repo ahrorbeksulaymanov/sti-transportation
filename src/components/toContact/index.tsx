@@ -29,6 +29,9 @@ const ToContact = () => {
             });
         } else {
             setIsAgreeCheck(true)
+            setTimeout(() => {
+                setIsAgreeCheck(false)
+            }, 100);
         }
     }
 
@@ -59,7 +62,7 @@ const ToContact = () => {
                         <div className="sm:col-span-6 col-span-12 sm:hidden block">
                             <div className="flex pl-[14px]">
                                 <label className="form-checkbox2">
-                                    <p className={`text-[14px] leading-[18px] ml-[14px] text-[#fff] opacity-[0.6] ${isAgreeCheck ? "check-comment-agree" : ""}`}>“I agree to the <a className='text-[#0078BC]' href="#">terms and conditions</a> <br /> as set out by the user agreement.”</p>
+                                    <p className={`text-[14px] leading-[18px] ml-[14px] text-[#fff] opacity-[0.6] ${isAgreeCheck ? " check-comment-agree" : ""}`}>“I agree to the <a className='text-[#0078BC]' href="#">terms and conditions</a> <br /> as set out by the user agreement.”</p>
                                     <input type="checkbox" />
                                     <span className="form-checkbox2-span"></span>
                                 </label>
@@ -71,7 +74,7 @@ const ToContact = () => {
                         <div className="sm:col-span-6 col-span-12 sm:block hidden">
                             <div className="flex pl-[30px] mt-2">
                                 <label className="form-checkbox2">
-                                    <p className={`text-[14px] leading-[18px] ml-[14px] text-[#fff] opacity-[0.6] ${isAgreeCheck ? "check-comment-agree" : ""}`}>“I agree to the <a className='text-[#0078BC] hover:underline' href="#">terms and conditions</a> <br /> as set out by the user agreement.”</p>
+                                    <p className={`text-[14px] leading-[18px] ml-[14px] text-[#fff] opacity-[0.6] ${isAgreeCheck ? " check-comment-agree" : ""}`}>“I agree to the <a className='text-[#0078BC] hover:underline' href="#">terms and conditions</a> <br /> as set out by the user agreement.”</p>
                                     <input onChange={(e) => setIsAgree(e.target.checked)} type="checkbox" />
                                     <span className="form-checkbox2-span"></span>
                                 </label>
