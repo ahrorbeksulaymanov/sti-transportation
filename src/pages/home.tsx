@@ -28,7 +28,6 @@ function Home() {
       <Partners />
       <Location />
       <ToContact />
-      <Footer />
       <ToTop />
     </div>
   );

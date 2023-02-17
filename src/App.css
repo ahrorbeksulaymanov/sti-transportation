@@ -274,3 +274,40 @@ like a tickmark */
     transform: translate(10px, 0);
   }
 }
+
+
+/* blog-pagination styles */
+.blog-pagination .ant-pagination-item-active{
+  background: #EE3532;
+  border-radius: 6px;
+  border-color: #EE3532;
+  color: #fff;
+  
+}
+.blog-pagination .ant-pagination-item-active:hover{
+  background: #e82a27;
+  border-color: #EE3532;
+}
+.blog-pagination .ant-pagination-item-link{
+    color: #fff !important;
+}
+.blog-pagination a{
+  color: #fff !important;
+  font-size: 16px;
+}
+.blog-pagination .ant-pagination{
+  position: relative;
+}
+.blog-pagination .ant-pagination-prev{
+  position: absolute;
+  left: 0;
+}
+.blog-pagination .ant-pagination-next{
+  position: absolute;
+  right: 0;
+}
+
+.pagination-active{
+  background: #EE3532;
+  border-radius: 6px;
+}

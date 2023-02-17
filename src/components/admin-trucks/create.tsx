@@ -1,13 +1,19 @@
 import { Input, message, Modal, Segmented } from "antd";
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import instance from "../../configs/axios_config";
 import PicturesWall from "../imageUploader";
 
 
 const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
 
+    const form:any = useRef();
     const [image, setimage] = useState<any>([])
-    const [is_active, setis_active] = useState<any>(true)
+    const [is_active, setis_active] = useState<any>(true);
+
+    useEffect(() => {
+        form?.current?.reset()
+        setimage([])
+    }, [isOpen])
 
     const saveItem = (e:any) => {
         e.preventDefault()
@@ -38,19 +44,19 @@ const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
             <Modal title="Truck add" footer={false} width={1000} open={isOpen} onOk={() => setIsOpen(false)} onCancel={() => setIsOpen(false)}>
                 <hr className="mb-4" />
                 <PicturesWall setimages={setimage} images={image} maxCount={3} />
-                <form onSubmit={saveItem}>
+                <form ref={form} onSubmit={saveItem}>
                     <div className="grid grid-cols-6 gap-3">
                         <div className="col-span-3">
                             <label htmlFor="" className="mt-3 mb-2 block">Truck name</label>
-                            <Input required name='name' className="w-[100%] block" placeholder="Name" />
+                            <input required name='name' className="w-[100%] block rounded-md px-2 py-1" style={{border:"1px solid #f0f0f0"}} placeholder="Name" />
                         </div>
                         <div className="col-span-3">
                             <label htmlFor="" className="mt-3 mb-2 block">Description</label>
-                            <Input name='description' className="w-[100%] block" placeholder="Description" />
+                            <input name='description' className="w-[100%] block rounded-md px-2 py-1" style={{border:"1px solid #f0f0f0"}} placeholder="Description" />
                         </div>
                         <div className="col-span-3">
                             <label htmlFor="" className="mt-3 mb-2 block">Price ($)</label>
-                            <Input required name='price' className="w-[100%] block" placeholder="Price" type="number" />
+                            <input required name='price' className="w-[100%] block rounded-md px-2 py-1" style={{border:"1px solid #f0f0f0"}} placeholder="Price" type="number" />
                         </div>
                         <div className="col-span-3">
                             <label htmlFor="" className="mt-3 mb-2 block">Status</label>

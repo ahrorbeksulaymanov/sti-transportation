@@ -2,6 +2,8 @@ import BlogsTable from "../components/admin-blogs";
 import CommentsTable from "../components/admin-comments";
 import TruckTable from "../components/admin-trucks";
 import Login from "../components/login";
+import Blogs from "../pages/blogs";
+import Contact from "../pages/contact";
 import Home from "../pages/home";
 import Purchase from "../pages/purchase";
 
@@ -21,6 +23,26 @@ export const public_routes = [
       title: "Purchase",
       path: "/purchase",
       component: Purchase,
+      exact: true,
+      config: {
+        showLink: false,
+        structure: "clientLayout",
+      },
+    },
+    {
+      title: "Blogs",
+      path: "/blogs",
+      component: Blogs,
+      exact: true,
+      config: {
+        showLink: false,
+        structure: "clientLayout",
+      },
+    },
+    {
+      title: "Contact",
+      path: "/contact",
+      component: Contact,
       exact: true,
       config: {
         showLink: false,
@@ -64,7 +86,7 @@ export const private_rotes = [
     },
     {
       title: "Blogs",
-      path: "/blogs",
+      path: "/blogs-list",
       component: BlogsTable,
       exact: true,
       config: {

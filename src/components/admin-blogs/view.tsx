@@ -24,6 +24,18 @@ const ViewItem = ({isOpenView, setIsOpenView, selectedItem}:any) => {
                         <label htmlFor="" className="font-bold mt-5 mb-0 block">Blog title</label>
                         <p>{selectedItem?.title}</p>
                     </div>
+                    <div className="col-span-3">
+                        <label htmlFor="" className="font-bold mt-5 mb-0 block">Blog hashtags</label>
+                        <p>{selectedItem?.hashtag}</p>
+                    </div>
+                    <div className="col-span-3">
+                        <label htmlFor="" className="font-bold mt-5 mb-0 block">Blog link</label>
+                        <p>{selectedItem?.link}</p>
+                    </div>
+                    <div className="col-span-6">
+                        <label htmlFor="" className="font-bold mt-5 mb-0 block">Blog description</label>
+                        <p>{selectedItem?.description}</p>
+                    </div>
                 </div>
             </Modal>
     )

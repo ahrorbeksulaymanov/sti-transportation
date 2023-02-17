@@ -36,7 +36,7 @@ const AboutPage = () => {
             </div>
                 <div className="mb-[-200px] mt-[60px] relative" >
                     <svg className='absolute w-[82px] h-[82px] top-[50%] left-[50%] cursor-pointer rounded-full video-player-animation' style={{transform:"translate(-50%, -50%)"}} viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="36" cy="36" r="36" fill="white" fill-opacity="0.6"/>
+                        <circle cx="36" cy="36" r="36" fill="white" fillOpacity="0.6"/>
                         <path d="M48.25 32.883C50.9167 34.4226 52.25 35.1924 52.25 36.3471C52.25 37.5018 50.9167 38.2716 48.25 39.8112L31 49.7705C28.3333 51.3101 27 52.0799 26 51.5026C25 50.9252 25 49.3856 25 46.3064L25 26.3878C25 23.3086 25 21.769 26 21.1917C27 20.6143 28.3333 21.3841 31 22.9237L48.25 32.883Z" fill="white"/>
                     </svg>
                     <img className='w-[100%] md:h-auto h-[300px] object-cover' src={vidoeBackImg} alt="" />

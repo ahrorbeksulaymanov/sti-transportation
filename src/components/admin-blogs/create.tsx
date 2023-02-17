@@ -1,5 +1,5 @@
 import { Input, message, Modal, Segmented } from "antd";
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import instance from "../../configs/axios_config";
 import PicturesWall from "../imageUploader";
 
@@ -8,12 +8,20 @@ const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
 
     const [image, setimage] = useState<any>([])
     const [is_active, setis_active] = useState<any>("1")
-    const form:any = useRef(null);
+    const form:any = useRef();
+
+    useEffect(() => {
+        form?.current?.reset()
+        setimage([])
+    }, [isOpen])
 
     const saveItem = (e:any) => {
         e.preventDefault()
         const formdata = new FormData();
         formdata.append("title", e.target.title.value)
+        formdata.append("link", e.target.link.value)
+        formdata.append("description", e.target.description.value)
+        formdata.append("hashtag", e.target.hashtag.value)
         formdata.append("type", is_active)
         for (let item of image) {
             formdata.append("file", item.originFileObj)
@@ -28,30 +36,40 @@ const CreateData = ({isOpen, setIsOpen, refresh, setrefresh}:any) => {
                 setIsOpen(false)
                 setrefresh(!refresh)
                 e.target.reset()
-                form?.current?.reset()
+                form.current.reset()
             }
         });
     }
 
     return(
 
-            <Modal title="Blog add" footer={false} width={1000} open={isOpen} onOk={() => {setIsOpen(false); form.current.reset()}} onCancel={() => {setIsOpen(false); form?.current?.reset()}}>
+            <Modal title="Blog add" footer={false} width={1000} open={isOpen} onOk={() => {setIsOpen(false); form?.current?.reset()}} onCancel={() => {setIsOpen(false); form?.current?.reset()}}>
                 <hr className="mb-4" />
                 <PicturesWall setimages={setimage} images={image} maxCount={1} />
-                <form ref={form} onSubmit={saveItem}>
+                <form onSubmit={saveItem} ref={form}>
                     <div className="grid grid-cols-6 gap-3">
                         <div className="col-span-3">
                             <label htmlFor="" className="mt-3 mb-2 block">Blog title</label>
-                            <Input required name='title' className="w-[100%] block" placeholder="Name" />
+                            <input required name='title' className="w-[100%] block rounded-md px-2 py-1" style={{border:"1px solid #f0f0f0"}} placeholder="Name" />
                         </div>
                         <div className="col-span-3">
-                            <label htmlFor="" className="mt-3 mb-2 block">File</label>
+                            <label htmlFor="" className="mt-3 mb-2 block">Blog link (instagram, facebook, telegram, website ...)</label>
+                            <input required name='link' className="w-[100%] block rounded-md px-2 py-1" style={{border:"1px solid #f0f0f0"}} placeholder="Link" />
+                        </div>
+                        <div className="col-span-3">
+                            <label htmlFor="" className="mt-3 mb-2 block">Blog description</label>
+                            <textarea required name='description' className="w-[100%] block rounded-md px-2 py-1" style={{border:"1px solid #f0f0f0"}} placeholder="Description" rows={4} />
+                        </div>
+                        <div className="col-span-3">
+                            <label htmlFor="" className="mt-3 mb-2 block">Hashtags</label>
+                            <input required name='hashtag' className="w-[100%] block rounded-md px-2 py-1" style={{border:"1px solid #f0f0f0"}} placeholder="Hashtags" />
+                            <label htmlFor="" className="mt-3 mb-2 block">File type</label>
                             <Segmented onChange={(e) => setis_active(e)} options={[{ label: (<div>Image or gif</div>), value: '1'}, { label: (<div>Video</div>), value: '2'}]} />
                         </div>
                     </div>
                     <div className="flex justify-end mt-4">
                         <button onClick={() => setIsOpen(false)} className="bg-orange px-4 py-2 ml-3 rounded-md text-white">Cancel</button>
-                        <button className="bg-[blue] px-4 py-2 ml-3 rounded-md text-white">Save</button>
+                        <button type="submit" className="bg-[blue] px-4 py-2 ml-3 rounded-md text-white">Save</button>
                     </div>
                 </form>
             </Modal>

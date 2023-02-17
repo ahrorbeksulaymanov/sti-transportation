@@ -23,7 +23,7 @@ const BlogsTable = () => {
             method: "get",
           }).then((res:any) => {
             if(res?.data?.data){
-                setdata(res?.data?.data);
+                setdata(res?.data?.data?.items);
             }
             setloading(false)
           });
@@ -61,6 +61,9 @@ const BlogsTable = () => {
                     <tr>
                         <th>#</th>
                         <th>Blog title</th>
+                        <th>Blog hashtags</th>
+                        <th>Blog link</th>
+                        <th>Blog description</th>
                         <th>File type</th>
                         <th>Actions</th>
                     </tr>
@@ -71,6 +74,9 @@ const BlogsTable = () => {
                             <tr key={index}>
                                 <td>{index+1}</td>
                                 <td>{item?.title}</td>
+                                <td>{item?.hashtag}</td>
+                                <td>{item?.link}</td>
+                                <td>{item?.description}</td>
                                 <td>{item?.type == 1 ? "Image" : "Video"} </td>
                                 <td>
                                     <div className="flex">

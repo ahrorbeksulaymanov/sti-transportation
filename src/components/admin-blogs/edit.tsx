@@ -52,6 +52,33 @@ const UpdateData = ({isOpenEdit, setIsOpenEdit, refresh, setrefresh, selectedIte
                             <Input />
                         </Form.Item>
                     </div>
+                    <div className="col-span-3">
+                        <Form.Item
+                            label="Blog link (instagram, facebook, telegram, website ...)"
+                            name="link"
+                            rules={[{ required: true, message: 'Please input link!' }]}
+                        >
+                            <Input />
+                        </Form.Item>
+                    </div>
+                    <div className="col-span-3">
+                        <Form.Item
+                            label="Blog description"
+                            name="description"
+                            rules={[{ required: true, message: 'Please input description!' }]}
+                        >
+                            <Input.TextArea rows={4} />
+                        </Form.Item>
+                    </div>
+                    <div className="col-span-3">
+                        <Form.Item
+                            label="Hashtags"
+                            name="hashtag"
+                            rules={[{ required: true, message: 'Please input hashtag!' }]}
+                        >
+                            <Input />
+                        </Form.Item>
+                    </div>
                 </div>
 
 

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import instance from "../../configs/axios_config";
+import Logo from '../../assets/images/logo.png'
 
 const AdminLayout = ({children}: any) => {
 
@@ -33,15 +34,22 @@ const AdminLayout = ({children}: any) => {
         <section className="bg-black min-h-[100vh]">
             <header className="bg-seriy py-5">
                 <div className="my-container">
-                    <div className="flex">
-                        <Link to='/admin'>Trucks</Link>
-                        <Link className="mx-8" to='/comments'>Comments</Link>
-                        <Link to='/blogs'>Blogs</Link>
+                    <div className="flex justify-between" style={{alignItems:"center"}}>
+                        <Link to='/'>
+                            <img className='lg:w-[200px] sm:w-[160px] w-[128px]' src={Logo} alt="" />
+                        </Link>
+                        <div className="flex">
+                          <Link to='/admin'>Trucks</Link>
+                          <Link className="mx-8" to='/comments'>Comments</Link>
+                          <Link to='/blogs-list'>Blogs</Link>
+                        </div>
                     </div>
                 </div>
             </header>
-            {children}
-            <footer className="bg-seriy py-5">
+            <div className="mb-[94px]">
+              {children}
+            </div>
+            <footer className="bg-seriy py-5 fixed right-0 left-0 bottom-0">
                 <div className="my-container">
                     <h1>Footer</h1>
                 </div>
