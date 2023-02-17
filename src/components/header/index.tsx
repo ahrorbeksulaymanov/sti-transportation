@@ -51,11 +51,11 @@ const Header = ({setOpen}:any) => {
                             </Link>
                         </div>
                         <div className="flex justify-end" style={{alignItems:"center"}} >
-                            <p onClick={() => relocate("#about-us")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>About</p>
-                            <p onClick={() => relocate("#why-sti")} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Why STI</p>                            
-                            <Link  to='/purchase' className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Lease to purchase</Link>
-                            <Link to={'/blogs'} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Blogs</Link>
-                            <Link to={'/contact'} className='lg:text-[18px] md:text-[15px] lg:mr-[40px] md:mr-[20px] md:block hidden header-menu-effect'>Contact</Link>
+                        <p onClick={() => relocate("#about-us")} className='lg:text-[18px] md:text-[15px] xl:mr-[40px] lg:mr-[30px] md:mr-[15px] md:block hidden header-menu-effect'>About</p>
+                            <p onClick={() => relocate("#why-sti")} className='lg:text-[18px] md:text-[15px] xl:mr-[40px] lg:mr-[30px] md:mr-[15px] md:block hidden header-menu-effect'>Why STI</p>
+                            <Link to={'/purchase'} className='lg:text-[18px] md:text-[15px] xl:mr-[40px] lg:mr-[30px] md:mr-[15px] md:block hidden header-menu-effect'>Lease to purchase</Link>
+                            <Link to={'/blogs'} className='lg:text-[18px] md:text-[15px] xl:mr-[40px] lg:mr-[30px] md:mr-[15px] md:block hidden header-menu-effect'>Blogs</Link>
+                            <Link to={'/contact'} className='lg:text-[18px] md:text-[15px] xl:mr-[40px] lg:mr-[30px] md:mr-[15px] md:block hidden header-menu-effect'>Contact</Link>
                             <a target={'_blank'} href='https://intelliapp.driverapponline.com/c/stitransportationinc?uri_b=ia_stitransportationinc_740871219' className='bg-orange lg:px-[21px] sm:px-[18px] px-[10px] lg:py-[12px] py-[10px] rounded-[100px] lg:text-[16px] sm:text-[14px] text-[12px] hover:bg-orange_hover'>Become a driver</a>
                         </div>
                     </div>

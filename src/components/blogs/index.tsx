@@ -11,8 +11,6 @@ const AllBlogs = () => {
     const [refresh, setrefresh] = useState(false)
     const [pageSize, setpageSize] = useState(2)
     const [currentPage, setcurrentPage] = useState(1)
-    const [pageCount, setpageCount] = useState(1)
-    const [total, settotal] = useState(10)
 
     useEffect(() => {
         setloading(true)
@@ -27,7 +25,6 @@ const AllBlogs = () => {
             if(res?.data?.data){
                 setData(res?.data?.data?.items);
                 setpageSize(res?.data?.data?.pages)
-                settotal(res?.data?.data?.total)
             }
             setloading(false)
           });
@@ -119,7 +116,7 @@ const AllBlogs = () => {
                         
                         <div className='flex'>
                             {[...Array(pageSize)].map((item, index) => ( 
-                                <span onClick={() => {setcurrentPage(index+1); setrefresh(!refresh)}} className={`inline-block md:text-[16px] text-[12px] md:px-[19px] px-[13px] md:py-[12px] py-[8px] mx-[2px] cursor-pointer rounded-[6px] ${currentPage == (index+1) ? "bg-orange" : "" }`}>{index+1}</span> 
+                                <span key={index} onClick={() => {setcurrentPage(index+1); setrefresh(!refresh)}} className={`inline-block md:text-[16px] text-[12px] md:px-[19px] px-[13px] md:py-[12px] py-[8px] mx-[2px] cursor-pointer rounded-[6px] ${currentPage == (index+1) ? "bg-orange" : "" }`}>{index+1}</span> 
                                 ) 
                             )}
                         </div>
