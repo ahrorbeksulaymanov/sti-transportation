@@ -5,7 +5,7 @@ import Loader from '../loader';
 
 const AllBlogs = () => {
 
-    const [data, setData] = useState([1,1, 1, 1, 1, 1, 1])
+    const [data, setData] = useState([])
     const [loading, setloading] = useState(true)
     const [refresh, setrefresh] = useState(false)
     const [pageSize, setpageSize] = useState(2)
