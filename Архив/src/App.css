@@ -1,0 +1,290 @@
+:root {
+  --main-bg-color: #000;
+}
+
+.my-container {
+  @apply container mx-auto md:w-auto w-[96%];
+}
+
+/* header blur class */
+
+.header-blur-class{
+  background: linear-gradient(116.71deg, #222222 -2.97%, rgba(30, 30, 30, 0) 103.71%);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(10px);
+  transition: 0.2s;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border: 1px solid #383838 !important;
+}
+td,
+th {
+  padding: 0.7rem 0.7rem 0.7rem 1rem !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #232323;
+  color: var(--bs-table-striped-color) !important;
+}
+
+.table-hover tr:hover {
+  background-color: #232323 !important;
+}
+
+.font-babes{
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.collapse-description{
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.swiper-wrapper{
+  align-items: center;
+}
+
+/* map alert coner */
+.left-arrow:before {
+  content: '';
+  display: block;  
+  position: absolute;
+  top: 34px;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border: 16px solid transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  /* rotate: -90deg; */
+  -webkit-transform:rotate(90deg);
+   -moz-transform:rotate(90deg);
+   -o-transform:rotate(90deg); 
+}
+
+.left-arrow:after {
+  content: '';
+  display: block;  
+  position: absolute;
+  top: 36px;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  border-bottom-color: #141414;
+  /* rotate: -90deg; */
+  -webkit-transform:rotate(90deg);
+   -moz-transform:rotate(90deg);
+   -o-transform:rotate(90deg); 
+}
+
+
+/* input activa style */
+
+input:focus{
+  outline: none;
+  border: 1px solid #EE3532 !important;
+}
+textarea::placeholder, input::placeholder{
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 114%;
+}
+textarea:focus{
+  outline: none;
+  border: 1px solid #EE3532 !important;
+}
+
+.form-checkbox{
+  background-color: red !important;
+  filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
+}
+
+
+
+.form-checkbox2 {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Hide the default checkbox */
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+/* Creating a custom checkbox
+based on demand */
+.form-checkbox2-span {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: black;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+}
+
+/* Specify the background color to be
+shown when checkbox is checked */
+.form-checkbox2 input:checked ~ .form-checkbox2-span {
+  border: none;
+  background-color: #EE3532;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.form-checkbox2-span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Display checkmark when checked */
+.form-checkbox2 input:checked ~ .form-checkbox2-span:after {
+  display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+showing only two border to make it look
+like a tickmark */
+.form-checkbox2 .form-checkbox2-span:after {
+  left: 8px;
+  bottom: 6px;
+  width: 8px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/*  video player animation  */
+
+.video-player-animation{
+  box-sizing: content-box;
+  animation: player-animation 1s infinite;
+  border-radius: 50%;
+}
+
+@keyframes player-animation{
+  0%{
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  100%{
+    border: 15px solid rgba(255, 250, 250, 0);
+  }
+}
+
+
+/*  header menu link effect  */
+
+.header-menu-effect {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-menu-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+@media only screen and (min-width: 768px) {
+  .header-menu-effect:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.second-text{
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 99%;
+  text-align: center;
+}
+
+
+/* sale-badge */
+.sale-badge{
+  transform: rotate(-30deg);
+  box-shadow: 2px 2px 0px #9C0603;
+}
+
+/* footer-madia-icon */
+.footer-madia-icon{
+  fill: #fff;
+  cursor: pointer;
+}
+.footer-madia-icon:hover{
+  animation: footer-icon-animation 0.2s ease-in-out 1;
+  fill: #EE3532;
+}
+
+@keyframes footer-icon-animation{
+  0%{
+    transform: translate(0px, 0);
+  }
+  50%{
+    transform: translate(0px, -5px);
+  }
+  100%{
+    transform: translate(0px, 0);
+  }
+}
+
+
+.check-comment-agree{
+  animation: check-comment 0.4s ease-in-out;
+}
+
+@keyframes check-comment{
+  0%{
+    transform: translate(15px, 0);
+  }
+  25%{
+    transform: translate(-15px, 0);
+  }
+  50%{
+    transform: translate(10px, 0);
+  }
+  75%{
+    transform: translate(-10px, 0);
+  }
+  100%{
+    transform: translate(10px, 0);
+  }
+}
+
+.ant-drawer-close svg{
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+.line-count-3{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}

@@ -16,7 +16,10 @@ const UpdateData = ({isOpenEdit, setIsOpenEdit, refresh, setrefresh, selectedIte
             url: `/v1/blog/${selectedItem?.id}`,
             method: "PATCH",
             data: {
-                title: values?.title
+                title: values?.title,
+                link:values?.link,
+                description:values?.description,
+                hashtag:values?.Hashtags
             }
         }).then((res:any) => {
             if(res?.data?.data){

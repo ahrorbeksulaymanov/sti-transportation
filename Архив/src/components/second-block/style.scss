@@ -1,0 +1,12 @@
+
+
+.learn-more-btn{
+    transition: 0.2s;
+    svg{
+        transition: 0.2s;
+    }
+    &:hover svg{
+        transform: translate(15px, 0);
+    }
+
+}

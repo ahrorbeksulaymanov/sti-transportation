@@ -1,0 +1,19 @@
+.login-page{
+    background-repeat: no-repeat;
+    background: url(../../assets/images/truck-back.avif);
+    background-size: cover;
+    input{
+        &::placeholder{
+            color: rgba(0, 0, 0, .3);
+        }
+    }
+}
+.login-form-wrapper{
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    input{
+        border: 1px solid rgb(203, 203, 203);
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
