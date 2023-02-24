@@ -3,7 +3,6 @@ import instance from '../../configs/axios_config';
 import { PATH_FILE } from '../../constants';
 import Loader from '../loader';
 
-  
 const AllBlogs = () => {
 
     const [data, setData] = useState([1,1, 1, 1, 1, 1, 1])
@@ -119,7 +118,7 @@ const AllBlogs = () => {
                         }
                         
                         <div className='flex'>
-                            {[...Array(pageSize)].map((item, index) => ( 
+                            {[...Array(pageSize)]?.map((item, index) => ( 
                                 <span key={index} onClick={() => {setcurrentPage(index+1); setrefresh(!refresh)}} className={`inline-block md:text-[16px] text-[12px] md:px-[19px] px-[13px] md:py-[12px] py-[8px] mx-[2px] cursor-pointer rounded-[6px] ${currentPage == (index+1) ? "bg-orange" : "" }`}>{index+1}</span> 
                                 ) 
                             )}
