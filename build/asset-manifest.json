@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4e85d6a5.css",
+    "main.js": "/static/js/main.fe84e3cd.js",
+    "static/js/787.0658fb90.chunk.js": "/static/js/787.0658fb90.chunk.js",
+    "static/media/main-trucks.png": "/static/media/main-trucks.13c7731236899e4b56fa.png",
+    "static/media/to-purchase-img.png": "/static/media/to-purchase-img.b6bd627992e15c8646b9.png",
+    "static/media/why-sti-img.png": "/static/media/why-sti-img.78b284cdcb203ed80640.png",
+    "static/media/video-back.jpeg": "/static/media/video-back.4751f94541aa884034ad.jpeg",
+    "static/media/truck-back.avif": "/static/media/truck-back.8dfb78c3841b98054c93.avif",
+    "static/media/map.png": "/static/media/map.ea737246278613405777.png",
+    "static/media/partner-logo1.png": "/static/media/partner-logo1.1f7cdcac5e0762ffce52.png",
+    "static/media/partner-logo3.png": "/static/media/partner-logo3.64942cb948966a0c74a4.png",
+    "index.html": "/index.html",
+    "main.4e85d6a5.css.map": "/static/css/main.4e85d6a5.css.map",
+    "main.fe84e3cd.js.map": "/static/js/main.fe84e3cd.js.map",
+    "787.0658fb90.chunk.js.map": "/static/js/787.0658fb90.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e85d6a5.css",
+    "static/js/main.fe84e3cd.js"
+  ]
+}
